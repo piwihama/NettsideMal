@@ -1,0 +1,124 @@
+/* Reset CSS */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background-color: #f4f4f9;
+  color: #333;
+}
+
+.step2-container {
+  width: 60%;
+  margin: 20px auto;
+  padding: 20px;
+  background-color: #ffffff;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  font-family: 'Arial', sans-serif;
+}
+
+/* Ny styling for step-tittel og step-informasjon */
+.step-title {
+  font-size: 24px;
+  color: #005050;
+  text-align: center;
+  margin-bottom: 10px;
+}
+
+.step-info {
+  font-size: 16px;
+  text-align: center;
+  margin-bottom: 20px;
+  color: #555;
+}
+
+/* Informasjonsboks */
+.info-box {
+  background-color: #e7f3ff;
+  border-left: 4px solid #007bff;
+  padding: 15px;
+  margin: 20px 0;
+  border-radius: 5px;
+  width: 100%;
+}
+
+.info-box p {
+  margin: 0 0 10px;
+}
+
+.info-box ul {
+  margin: 0;
+  padding-left: 20px;
+  list-style-type: disc;
+}
+
+.step2-form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.step2-group {
+  margin-bottom: 15px;
+  width: 100%;
+}
+
+.step2-group label {
+  font-weight: bold;
+  margin-bottom: 5px;
+  display: block;
+}
+
+.step2-control {
+  width: 100%;
+  padding: 8px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  background-color: #fff;
+  font-size: 0.9em;
+  transition: border-color 0.3s;
+}
+
+.step2-control:focus {
+  border-color: #005050;
+  outline: none;
+}
+
+.step2-btn-primary, .step2-fetch-button {
+  margin-top: 10px;
+  padding: 10px 20px;
+  background-color: #005050 !important;
+  color: white !important;
+  border: none !important;
+  border-radius: 4px !important;
+  cursor: pointer !important;
+  font-size: 0.9em !important;
+  transition: background-color 0.3s !important;
+  text-decoration: none !important;
+}
+
+.step2-btn-primary:hover, .step2-fetch-button:hover {
+  background-color: #003838 !important;
+}
+
+h2 {
+  color: #005050;
+  text-align: center;
+  margin-bottom: 15px;
+  font-size: 1.5em;
+}
+
+.step2-error {
+  color: red;
+  font-size: 0.8em;
+}
+
+.step2-navigation {
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+}

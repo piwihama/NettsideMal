@@ -1,0 +1,305 @@
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f4f4f9;
+    color: #333;
+    margin: 0;
+    padding: 0;
+}
+
+.whole-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    max-width: 100%;
+    padding: 20px;
+}
+.spinner-container-live {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 200px; /* Juster høyden etter behov */
+  }
+  
+  .spinner-live {
+    width: 50px;
+    height: 50px;
+    border: 6px solid #f3f3f3; /* Lys grå */
+    border-top: 6px solid #005050; /* Din hovedfarge */
+    border-radius: 50%;
+    animation: spin 1s linear infinite;
+  }
+  
+  @keyframes spin {
+    0% {
+      transform: rotate(0deg);
+    }
+    100% {
+      transform: rotate(360deg);
+    }
+  }
+  
+  .fade-in-live {
+    animation: fadeIn 0.5s ease-in-out;
+  }
+  
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+      transform: translateY(10px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  
+.live-auctions-container {
+    display: flex;
+    margin: 20px auto;
+    max-width: 1200px;
+}
+
+.filters-section {
+    width: 300px;
+    padding: 20px;
+    background-color: rgb(246, 246, 246);
+    border-radius: 10px;
+    border: 1px solid #ccc;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    margin-right: 40px;
+}
+
+.filters-section h2 {
+    margin-top: 0;
+    font-size: 24px;
+    color: #333;
+}
+
+.filter-group {
+    margin-bottom: 15px;
+}
+
+.filter-group h3 {
+    margin: 10px 0;
+    font-size: 18px;
+    color: #333;
+}
+
+.filter-group label {
+    margin-left: 5px;
+}
+.kategoribiltitle{
+    font-weight: bold;
+    
+    margin-bottom: 10px;
+
+}
+
+.filter-group input[type="text"],
+.filter-group input[type="number"],
+.filter-group select {
+    width: 100%;
+    padding: 8px;
+    box-sizing: border-box;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+}
+
+.filter-group input[type="checkbox"] {
+    margin-right: 5px;
+}
+
+.live-btn {
+    display: block;
+    width: 100%;
+    padding: 12px;
+    background-color: #005050; /* Teal color for a professional look */
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+    text-align: center;
+    transition: background-color 0.3s;
+}
+
+.live-btn:hover {
+    background-color: #0056b3;
+}
+
+.auctions-section {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+/* Stylized dropdown styling */
+.sort-options {
+    margin-bottom: 20px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.sort-options label {
+    font-size: 16px;
+    color: #333;
+}
+
+.sort-options select {
+    padding: 10px 15px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    background-color: #ffffff;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    transition: border-color 0.3s, box-shadow 0.3s;
+    appearance: none; /* Fjerner standard pil for en mer ren look */
+    background-image: url('data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTAiIGhlaWdodD0iNSIgdmlld0JveD0iMCAwIDEwIDUiIGZpbGw9Im5vbmUiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PHBhdGggZD0iTTAgMGw1IDVsNS01IiBmaWxsPSIjNjY2Ii8+PC9zdmc+'); /* Egendefinert pil */
+    background-repeat: no-repeat;
+    background-position: right 10px center;
+}
+
+.sort-options select:focus {
+    border-color: #005050; /* Teal color */
+    box-shadow: 0 0 5px rgba(0, 80, 80, 0.2); /* Subtle shadow effect */
+}
+
+.sort-options select:hover {
+    border-color: #007b7b;
+}
+
+.auction-item {
+    display: flex;
+    align-items: center;
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    transition: transform 0.3s;
+    border: 1px solid #ccc; /* Thicker, visible border */
+}
+
+.auction-item:hover {
+    transform: translateY(-5px);
+}
+
+.auction-item img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    margin-right: 20px;
+}
+
+.auction-info {
+    padding: 20px;
+    flex: 1;
+    max-width: 200px; /* Sett en fast bredde */
+}
+
+.auction-info h2 {
+    margin: 0 0 10px;
+    font-size: 20px;
+    color: #333;
+}
+
+.auction-info p {
+    margin: 5px 0;
+    font-size: 16px;
+    color: #666;
+}
+
+.countdown {
+    text-align: left;
+    margin-top: 20px;
+    font-size: 18px;
+    color: #d9534f;
+    background-color: #ffe5e5;
+    padding: 10px;
+    border-radius: 5px;
+}
+
+.toggle-filters-button {
+    display: none;
+    background-color: #005050; /* Teal color for a professional look */
+    color: white;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    width: 100%;
+    cursor: pointer;
+    margin-bottom: 15px;
+    font-size: 16px;
+}
+
+.filters-form {
+    display: block;
+}
+
+.filters-form.open {
+    display: block;
+}
+
+.auction-detail {
+    display: flex;
+    justify-content: space-between;
+    font-size: 13px;
+}
+
+.left-text {
+    text-align: left;
+    font-weight: bold;
+}
+
+.right-text {
+    text-align: right;
+    margin-bottom: 6px;
+}
+
+@media (max-width: 600px) {
+    .live-auction-image {
+        width: 100%; /* Fyll hele bredden */
+        height: 150px; /* Sett fast høyde */
+        object-fit: cover; /* Sikrer at bildet fyller plassen og kutter det som ikke passer */
+        margin: 0; /* Fjern marginer rundt bildet */
+    }
+
+    .auction-item {
+        flex-direction: column; /* Juster auksjonselementet til å være vertikalt */
+        align-items: flex-start;
+    }
+
+    .live-auctions-container {
+        flex-direction: column;
+    }
+
+    .filters-section {
+        width: 100%;
+        margin-bottom: 20px;
+    }
+
+    .auction-info {
+        padding: 10px;
+        flex: 1;
+        max-width: 100%;
+    }
+
+    .live-btn {
+        width: 100%;
+    }
+
+    .toggle-filters-button {
+        display: block;
+    }
+
+    .filters-form {
+        display: none;
+    }
+
+    .filters-form.open {
+        display: block;
+    }
+}

@@ -1,0 +1,205 @@
+.myauctions-container {
+  padding: 20px;
+  background-color: #f4f4f9;
+  min-height: 100vh;
+}
+
+h1 {
+  text-align: center;
+  margin-bottom: 15px;
+  color: #333;
+  font-size: 24px;
+  font-weight: bold;
+}
+
+.myauctions-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 15px;
+  justify-content: center;
+}
+
+.myauctions-card {
+  background-color: #ffffff;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  padding: 10px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.08);
+  cursor: pointer;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  overflow: hidden;
+}
+
+.myauctions-card:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+}
+
+.myauctions-image-container {
+  position: relative;
+  width: 100%;
+  height: 180px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.myauctions-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 6px;
+}
+
+.myauctions-image-nav {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background-color: rgba(0, 0, 0, 0.5);
+  color: #fff;
+  border: none;
+  font-size: 18px;
+  padding: 5px 10px;
+  cursor: pointer;
+  z-index: 10;
+  border-radius: 50%;
+  transition: background-color 0.3s ease;
+}
+
+.myauctions-image-nav.prev {
+  left: 10px;
+}
+
+.myauctions-image-nav.next {
+  right: 10px;
+}
+
+.myauctions-image-nav:hover {
+  background-color: rgba(0, 0, 0, 0.7);
+}
+
+.myauctions-info {
+  padding: 8px 0;
+  text-align: left;
+  position: relative;
+}
+
+.myauctions-expand-icon {
+  position: absolute;
+  top: 0;
+  right: 0;
+  font-size: 18px;
+  cursor: pointer;
+  color: #c70039;
+  transform: rotate(0);
+  transition: transform 0.3s ease;
+}
+
+.myauctions-expand-icon.expanded {
+  transform: rotate(180deg);
+}
+
+.myauctions-info h6 {
+  font-size: 16px;
+  color: #c70039;
+  font-weight: bold;
+  margin-bottom: 5px;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
+}
+
+.myauctions-info p {
+  margin: 3px 0;
+  font-size: 13px;
+  color: #555;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
+}
+
+.myauctions-details {
+  padding: 10px;
+  background-color: #f9f9f9;
+  border-top: 1px solid #ddd;
+  font-size: 13px;
+  color: #555;
+  line-height: 1.4;
+  display: none; /* Skjul detaljer som standard */
+}
+
+.myauctions-card.expanded .myauctions-details {
+  display: block; /* Vis detaljer for utvidet kort */
+}
+
+.myauctions-back-button {
+  display: inline-block;
+  padding: 8px 16px;
+  font-size: 14px;
+  font-weight: bold;
+  color: white;
+  background-color: #0056b3;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+  margin-bottom: 20px;
+}
+
+.myauctions-back-button:hover {
+  background-color: #003d80;
+  transform: scale(1.05);
+}
+
+.myauctions-skeleton-loader {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 15px;
+}
+
+.myauctions-skeleton-card {
+  background-color: #e0e0e0;
+  height: 220px;
+  border-radius: 8px;
+  animation: pulse 1.5s infinite;
+}
+
+@keyframes pulse {
+  0% {
+    background-color: #e0e0e0;
+  }
+  50% {
+    background-color: #f0f0f0;
+  }
+  100% {
+    background-color: #e0e0e0;
+  }
+}
+
+/* Responsiv design */
+@media (max-width: 768px) {
+  h1 {
+    font-size: 20px;
+  }
+
+  .myauctions-card {
+    padding: 8px;
+  }
+
+  .myauctions-image {
+    height: 120px;
+  }
+
+  .myauctions-info h6 {
+    font-size: 14px;
+  }
+
+  .myauctions-info p {
+    font-size: 12px;
+  }
+
+  .myauctions-back-button {
+    font-size: 12px;
+    padding: 6px 12px;
+  }
+}

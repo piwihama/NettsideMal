@@ -1,0 +1,301 @@
+body {
+  background-color: #ffffff;
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;
+}
+
+/* Safe area styling */
+.safe-area-top {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: env(safe-area-inset-top); /* For "notch" området */
+  background-color: #005050; /* Sett ønsket farge */
+  z-index: 1000; /* Sørger for at den er over alt annet */
+}
+
+.safe-area-bottom {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: env(safe-area-inset-bottom); /* For bunnen av skjermen */
+  background-color: #005050; /* Sett ønsket farge */
+  z-index: 1000; /* Sørger for at den er over alt annet */
+}
+
+.header-top {
+  background-color: #ffffff;
+  padding: calc(10px + env(safe-area-inset-top)) 0 10px 0; /* Remove side padding */
+  width: 100%;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  border-bottom: 2px solid #dddddd;
+}
+
+.upper-row {
+  display: flex;
+  align-items: center;
+  justify-content: center; /* Center content horizontally */
+  width: 100%;
+  flex-wrap: wrap;
+  gap: 10px; /* Reduce gap between items */
+}
+
+/* Logo Styling */
+.logo-large {
+  font-size: 1.5em; /* Larger font size for prominence */
+  font-weight: 700; /* Stronger weight */
+  color: #005050; /* Teal color for a professional look */
+  text-decoration: none;
+  padding: 5px 15px; /* Increased padding for better spacing */
+  border-radius: 6px; /* Slightly more rounded corners */
+  border: 2px solid #005050; /* Thicker border for better visibility */
+  background: linear-gradient(45deg, #005050, #333333); /* Gradient background */
+  color: #fff; /* White text color */
+  font-family: 'Helvetica Neue', sans-serif; /* Clean and modern font */
+  transition: background-color 0.3s ease, color 0.3s ease; /* Smooth transitions */
+}
+
+.logo-large:hover {
+  background-color: rgb(186, 181, 181); /* Soft Yellow on hover */
+  color: #005050; /* Teal text color on hover */
+  border-color: rgb(186, 181, 181); /* Soft Yellow border on hover */
+}
+
+/* Search Form Styling */
+.search-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 10px;
+}
+
+.search-input {
+  padding: 8px 12px;
+  border: 1px solid #dddddd;
+  border-radius: 4px 0 0 4px;
+  outline: none;
+  font-size: 16px;
+}
+
+.search-button {
+  padding: 8px 12px;
+  border: 1px solid #dddddd;
+  border-left: none;
+  border-radius: 0 4px 4px 0;
+  background-color: #005050 !important; /* Teal color */
+  color: #ffffff !important;
+  cursor: pointer;
+  height: 40px; /* Match the height of the input */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 16px; /* Adjust font size for icon */
+}
+
+/* Header Button Styling */
+.header-button-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px; /* Reduce gap between buttons */
+}
+
+.header-button {
+  color: #333333;
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+  font-size: 1.1em;
+  padding: 5px 10px;
+  border-radius: 4px;
+  border: 1px solid #dddddd;
+  background-color: #f9f9f9;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.header-button i {
+  margin-right: 5px;
+}
+
+.header-button:hover {
+  background-color: #005050;
+  color: #ffffff;
+}
+
+/* Menu Styling */
+.menu {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr); /* Adjust number of columns based on screen size */
+  gap: 10px;
+  background-color: #333333;
+  padding: 10px 0;
+  width: 100%; /* Endret fra 100vw til 100% */
+  margin: 0; /* Remove margin */
+  border-top: 1px solid #dddddd;
+  justify-content: center; /* Center items */
+}
+
+
+.menu-button {
+  color: #ffffff;
+  text-decoration: none;
+  font-size: 1em;
+  transition: color 0.3s;
+  display: flex;
+  align-items: center;
+  justify-content: center; /* Center content within each button */
+  padding: 10px;
+  background-color: #444444;
+  border-radius: 4px;
+}
+
+.menu-button i {
+}
+
+.menu-button:hover {
+  color: rgb(186, 181, 181); /* Soft Yellow */
+}
+
+@media (min-width: 768px) {
+  .menu {
+    display: inline-flex; /* Change to inline-flex on larger screens */
+
+    gap: 18px; /* Adjust gap between buttons */
+  }
+}
+
+/* Mobile Bottom Navigation */
+.mobile-bottom-nav {
+  display: none;
+}
+
+@media (max-width: 768px) {
+  @media (max-width: 768px) {
+    
+    .upper-row {
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between; /* Ensure the logo and search bar are spaced evenly */
+      align-items: center;
+      width: 100%;
+      padding: 0 15px; /* Add some padding from the screen edges */
+    }
+  
+    .logo-large {
+      flex-shrink: 1; /* Allows the logo to shrink to fit */
+      font-size: 10.5px; /* Reduce the font size on mobile */
+      max-width: 42%; /* Restrict the logo size to a percentage of the screen */
+      padding: 12.5px;
+      white-space: nowrap; /* Prevents text from wrapping */
+      overflow: hidden; /* Ensures any excess content is hidden */
+      text-overflow: ellipsis; /* Add ellipsis if the text overflows */
+    
+    }
+  
+    .search-container {
+      display: flex;
+      align-items: center;
+      flex-grow: 1; /* Ensures the search container fills available space */
+      margin-left: 3px; /* Add space between the logo and the search */
+    }
+  
+    .search-input {
+      flex-grow: 1; /* Make the input grow to take available space */
+      font-size: 10px; /* Reduce the font size for smaller screens */
+      padding: 11px;
+      border: 1px solid #dddddd;
+      border-radius: 4px 0 0 4px;
+    }
+  
+    .search-button {
+      padding: 6px 10px; /* Reduce button size */
+      font-size: 12px; /* Smaller icon and text */
+      background-color: #005050;
+      color: white;
+      border-radius: 0 4px 4px 0;
+    }
+  
+    .header-button-container {
+      display: none;
+    }
+  
+    .menu {
+      grid-template-columns: repeat(4, 1fr);
+      justify-content: center;
+    }
+  
+    .menu.open {
+      display: flex;
+    }
+  
+    .mobile-menu-button {
+      display: none;
+    }
+  
+    .mobile-only {
+      display: block;
+    }
+  }
+  
+
+
+
+  .mobile-bottom-nav {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    position: fixed;
+    bottom: 0;
+    z-index: 10;
+    width: 100%;
+    background-color: #ffffff;
+    padding: 10px 0;
+    box-shadow: 0 -2px 4px rgba(0, 0, 0, 0.1);
+    border-top: 2px solid #dddddd;
+  }
+
+  .bottom-nav-button {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    color: #005050;
+    font-size: 1em;
+    text-decoration: none;
+    font-weight: 500;
+    border: none;
+  }
+
+  .bottom-nav-button i {
+    font-size: 1.5em;
+  }
+
+  .bottom-nav-button:hover {
+    color: rgb(186, 181, 181);
+  }
+}
+
+@media (min-width: 769px) {
+  .mobile-only {
+    
+    display: none;
+  }
+
+  /* Sikre at knappene vises på desktop */
+  .info-button,
+  .nyauksjon-button,
+  .header-button {
+    display: flex;
+  }
+  .menu {
+    display: inline-flex;
+    gap: 20px;
+    width: 100vw; /* Full width on larger screens */
+    justify-content: center; /* Center items on larger screens */
+
+  }
+}
+

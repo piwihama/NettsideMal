@@ -1,0 +1,204 @@
+/* src/MinSide.css */
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f9;
+    color: #333;
+}
+
+.myside-container {
+    padding: 20px;
+    background-color: #f4f4f9;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.myside-content {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    width: 100%;
+    max-width: 1200px;
+}
+
+.myside-section {
+    background-color: #ffffff;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+}
+
+.myside-card {
+    border: 1px solid #dddddd;
+    border-radius: 8px;
+    overflow: hidden;
+    transition: box-shadow 0.3s ease;
+}
+
+.myside-card:hover {
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+.myside-card-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 20px;
+    cursor: pointer;
+    background-color: #e6e6e6;
+    border-bottom: 1px solid #dddddd;
+    transition: background-color 0.3s ease;
+}
+
+.myside-card-header:hover {
+    background-color: #d9d9d9;
+}
+
+.myside-card-body {
+    padding: 15px 20px;
+    display: none; /* Initially hidden */
+}
+
+.myside-card-body.active {
+    display: block; /* Display when active */
+}
+
+.myside-card-title {
+    font-size: 1.2em;
+    color: #005050; /* Teal color */
+    font-weight: bold;
+}
+
+.myside-toggle-icon {
+    font-size: 1.2em;
+    transition: transform 0.3s ease;
+}
+
+.myside-toggle-icon.active {
+    transform: rotate(180deg); /* Rotate icon when active */
+}
+
+/* Updated styles for auctions grid and cards */
+.myside-auctions-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); /* Flexible columns */
+    gap: 15px;
+    justify-content: center;
+}
+
+.myside-auction-card {
+    background-color: #ffffff;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    padding: 15px;
+    width: 100%;
+    max-width: 100%; /* Fyll hele grid-cellen */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    transition: transform 0.2s ease-in-out;
+}
+
+.myside-auction-card:hover {
+    transform: scale(1.05);
+}
+
+.myside-auction-image {
+    width: 100%;
+    height: 120px;
+    border-radius: 10px;
+    margin-bottom: 10px;
+    object-fit: cover;
+}
+
+.myside-auction-details {
+    background-color: #F0F4F8;
+    border-radius: 10px;
+    padding: 15px;
+    font-size: 14px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.myside-auction-details h3 {
+    font-size: 16px;
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+
+.myside-auction-smalldetails {
+    font-size: 12px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.myside-title-value-auction {
+    display: flex;
+    flex-direction: column;
+}
+
+.myside-auction-link {
+    display: inline-block;
+    margin-top: 10px;
+    background-color: #008080;
+    color: white;
+    padding: 6px 12px;
+    border-radius: 4px;
+    text-decoration: none;
+    font-size: 12px;
+    transition: background-color 0.3s ease;
+}
+
+.myside-auction-link:hover {
+    background-color: #005050;
+}
+
+/* Skeleton loader for loading state */
+.skeleton-loader {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 15px;
+    justify-items: stretch;
+}
+
+.skeleton-card {
+    background-color: #e0e0e0;
+    border-radius: 10px;
+    height: 220px;
+    width: 100%;
+    animation: pulse 1.5s infinite;
+}
+
+@keyframes pulse {
+    0% {
+        background-color: #e0e0e0;
+    }
+    50% {
+        background-color: #f0f0f0;
+    }
+    100% {
+        background-color: #e0e0e0;
+    }
+}
+
+/* Responsiveness */
+@media (max-width: 768px) {
+    .myside-auctions-grid {
+        grid-template-columns: repeat(2, 1fr); /* Two columns for smaller screens */
+    }
+
+    .myside-auction-card {
+        padding: 10px;
+        font-size: 12px;
+    }
+
+    .myside-auction-image {
+        height: 100px;
+    }
+
+    .myside-auction-details {
+        padding: 10px;
+        font-size: 12px;
+    }
+}

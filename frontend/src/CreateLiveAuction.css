@@ -1,0 +1,70 @@
+.create-live-auction-container .create-live-auction {
+  max-width: 500px;
+  margin: 20px auto;
+  padding: 15px;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+  background-color: #f9f9f9;
+  font-family: Arial, sans-serif;
+}
+
+.create-live-auction-container .create-live-auction h1 {
+  text-align: center;
+  margin-bottom: 15px;
+  font-size: 24px;
+  color: #333;
+  font-weight: 600;
+}
+
+.create-live-auction-container .form-group {
+  margin-bottom: 12px;
+}
+
+.create-live-auction-container .form-group label {
+  display: block;
+  margin-bottom: 3px;
+  font-weight: 500;
+  color: #555;
+  font-size: 14px;
+}
+
+.create-live-auction-container .form-group input,
+.create-live-auction-container .form-group select,
+.create-live-auction-container .form-group textarea {
+  width: 100%;
+  padding: 6px 10px;
+  box-sizing: border-box;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  font-size: 14px;
+  color: #333;
+  background-color: #fff;
+  transition: border-color 0.3s;
+}
+
+.create-live-auction-container .form-group input:focus,
+.create-live-auction-container .form-group select:focus,
+.create-live-auction-container .form-group textarea:focus {
+  border-color: #007bff;
+  outline: none;
+}
+
+.create-live-auction-container button[type="submit"] {
+  display: block;
+  width: 100%;
+  padding: 10px;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 16px;
+  font-weight: 500;
+  transition: background-color 0.3s;
+}
+
+.create-live-auction-container button[type="submit"]:hover {
+  background-color: #0056b3;
+}
+

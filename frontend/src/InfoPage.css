@@ -1,0 +1,236 @@
+.info-page-container {
+    display: flex;
+    width: 50%;
+    margin: 20px auto;
+    margin-top: 70px;
+    margin-bottom: 70px;
+
+}
+
+.info-menu {
+    flex: 0 0 250px;
+}
+
+.info-sidebar-menu {
+    list-style-type: none;
+    padding: 0;
+}
+
+.info-sidebar-menu li {
+    padding: 10px;
+    background-color: #f4f4f9;
+    border-bottom: 1px solid #ccc;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.info-sidebar-menu li.active {
+    background-color: #005050;
+    color: white;
+}
+
+.info-sidebar-menu li:hover {
+    background-color: #e0e0e0;
+}
+
+.info-content {
+    flex: 1;
+    padding-left: 20px;
+}
+
+.info-mobile-menu-toggle {
+    display: none;
+    background-color: #005050;
+    color: #fff;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-bottom: 10px;
+    
+}
+
+.info-sidebar-menu.open {
+    display: block;
+}
+
+@media (max-width: 768px) {
+    .info-page-container {
+        flex-direction: column;
+    }
+
+    .info-menu {
+        flex: 1;
+    }
+
+    .info-mobile-menu-toggle {
+        display: block;
+    }
+
+    .info-sidebar-menu {
+        display: none;
+        background-color: #f9f9f9;
+        margin-bottom: 10px;
+        border-radius: 5px;
+    }
+
+    .info-sidebar-menu.open {
+        display: block;
+    }
+
+    .info-content {
+        padding-left: 0;
+    }
+}
+
+/* FAQ Section Styles */
+.info-section {
+    width: 100%;
+}
+
+.info-item {
+    margin-bottom: 15px;
+}
+
+.info-question {
+    background-color: #005050;
+    color: white;
+    padding: 12px;
+    width: 100%;
+    text-align: left;
+    border: none;
+    border-radius: 4px;
+    outline: none;
+    cursor: pointer;
+    font-size: 1em;
+    transition: background-color 0.3s ease;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.info-question:hover {
+    background-color: #003838;
+}
+
+.info-answer {
+    padding: 12px;
+    background-color: #f4f4f9;
+    border-left: 4px solid #005050;
+    border-radius: 4px;
+    margin-top: 5px;
+    font-size: 0.9em;
+    line-height: 1.5;
+}
+
+.info-icon {
+    background-color: #005050;
+    color: white;
+    border-radius: 50%;
+    padding: 3px;
+    margin-left: 10px;
+    font-size: 14px;
+    cursor: pointer;
+}
+
+.info-tooltip1 {
+    position: relative;
+    display: inline-block;
+}
+
+/* Om oss seksjon styling */
+.about-us-section {
+    line-height: 1.6;
+    font-size: 1em;
+    color: #333;
+    margin-top: 20px;
+}
+
+.about-intro p {
+    margin-bottom: 20px;
+}
+
+.team-section {
+    margin-top: 30px;
+}
+
+.team-members {
+    display: flex;
+    flex-direction: column;
+}
+
+.team-member {
+    margin-bottom: 15px;
+}
+
+.team-member-button {
+    background-color: #005050;
+    color: white;
+    padding: 12px;
+    text-align: left;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 1em;
+    transition: background-color 0.3s ease;
+}
+
+.team-member-button:hover {
+    background-color: #003838;
+}
+
+.team-member-info {
+    padding: 10px;
+    background-color: #f4f4f9;
+    border-left: 4px solid #005050;
+    border-radius: 4px;
+    margin-top: 5px;
+    font-size: 0.9em;
+    line-height: 1.5;
+}
+
+.location-section {
+    margin-top: 30px;
+}
+
+.faq-section {
+    margin-top: 30px;
+}
+
+.faq-section .info-item {
+    margin-bottom: 10px;
+}
+
+.info-tooltip1 .info-tooltiptext1 {
+    visibility: hidden;
+    width: 220px;
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    border-radius: 6px;
+    padding: 5px;
+    position: absolute;
+    z-index: 1;
+    bottom: 125%;
+    left: 50%;
+    margin-left: -110px;
+    opacity: 0;
+    transition: opacity 0.3s;
+    font-size: 12px;
+}
+
+.info-tooltip1 .info-tooltiptext1::after {
+    content: '';
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    margin-left: -5px;
+    border-width: 5px;
+    border-style: solid;
+    border-color: #333 transparent transparent transparent;
+}
+
+.info-tooltip1:hover .info-tooltiptext1 {
+    visibility: visible;
+    opacity: 1;
+}

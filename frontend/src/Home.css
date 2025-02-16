@@ -1,0 +1,364 @@
+/* src/Home.css */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box; /* Sørger for at padding og border ikke påvirker elementstørrelsen */
+}
+.spinner-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 200px; /* Juster høyden etter behov */
+}
+.home-auction-item.placeholder {
+  background-color: #f4f4f4;
+  border: 1px dashed #ddd;
+  height: 250px;
+  border-radius: 8px;
+}
+
+.spinner {
+  width: 50px;
+  height: 50px;
+  border: 6px solid #f3f3f3; /* Lys grå */
+  border-top: 6px solid #005050; /* Din hovedfarge */
+  border-radius: 50%;
+  animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background-color: #F0F4F8; /* Light Gray */
+  color: #333333; /* Dark Gray */
+}
+
+.fade-in {
+  animation: fadeIn 0.5s ease-in-out;
+}
+
+.fade-out {
+  animation: fadeOut 0.3s ease-in-out;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fadeOut {
+  from {
+    opacity: 1;
+    transform: translateY(0);
+  }
+  to {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+}
+
+.menu-button {
+  background: none;
+  border: none;
+  color: white;
+  padding: 10px 20px;
+  cursor: pointer;
+  font-size: 16px;
+  text-decoration: none;
+  transition: background-color 0.3s ease;
+}
+
+.menu-button:hover {
+  background-color: #444;
+}
+
+.home-container {
+  padding: 10px 5px;
+  text-align: center;
+  background-color: #FFFFFF;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.home-banner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background: url('/public/images/banner.webp') no-repeat center center;
+  background-size: cover;
+  color: white;
+  padding: 20px;
+  border-radius: 10px;
+  margin: 5px 0;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.home-banner-content {
+  flex: 1;
+  background: rgba(0, 0, 0, 0.5);
+  padding: 20px;
+  border-radius: 10px;
+}
+
+
+.home-banner h1 {
+  margin-bottom: 15px;
+  font-size: 30px;
+}
+
+.home-banner p {
+  margin-bottom: 8px;
+  font-size: 16px;
+}
+
+.home-auctions-section {
+  margin-top: 40px;
+}
+.home-banner ul {
+  list-style-type: none;
+  padding: 0;
+  font-size: 14px;
+}
+
+.home-banner ul li {
+  margin: 3px 0;
+}
+
+.home-banner-button {
+  background-color: #FFD166; /* Soft Yellow */
+  color: #333333; /* Dark Gray */
+  border: 2px solid #FFD166; /* Soft Yellow */
+  padding: 8px 16px;
+  cursor: pointer;
+  border-radius: 4px;
+  margin-top: 15px;
+  font-size: 14px;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.home-banner-button:hover {
+  background-color: #FF6B6B; /* Coral */
+  color: white;
+}
+
+.home-banner-image {
+  flex: 1;
+  text-align: center;
+}
+
+.home-banner-image img {
+  max-width: 100%;
+  border-radius: 10px;
+}
+.home-auctions-section h2 {
+  font-size: 28px;
+  text-align: left; /* Justerer teksten til venstre */
+  margin-bottom: 20px;
+  color: #333;
+  font-weight: bold;
+}
+
+/* Grid layout for auksjoner */
+.home-auction-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); /* Fire kort per rad */
+  gap: 0; /* Fjern avstand mellom kortene */
+  justify-content: center;
+  margin: 0;
+}
+
+.home-auction-item {
+  background-color: #ffffff;
+  border: 1px solid #ddd;
+  border-radius: 10px;
+  padding: 15px;
+  width: 100%;
+  max-width: 100%; /* Fyll hele grid-cellen */
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  transition: transform 0.2s ease-in-out;
+}
+
+.home-auction-item:hover {
+  transform: scale(1.05);
+}
+
+.home-auction-image {
+  width: 100%;
+  height: 120px;
+  border-radius: 10px;
+  margin-bottom: 10px;
+  object-fit: cover;
+}
+
+.home-auction-details {
+  background-color: #F0F4F8;
+  border-radius: 10px;
+  padding: 15px;
+  font-size: 14px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.home-auction-details h3 {
+  font-size: 16px;
+  font-weight: bold;
+  margin-bottom: 5px;
+}
+
+.home-auction-smalldetails {
+  font-size: 12px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.home-title-value-auction {
+  display: flex;
+  flex-direction: column;
+}
+
+.home-auction-link {
+  display: inline-block;
+  margin-top: 10px;
+  background-color: #008080;
+  color: white;
+  padding: 6px 12px;
+  border-radius: 4px;
+  text-decoration: none;
+  font-size: 12px;
+  transition: background-color 0.3s ease;
+}
+
+.home-auction-link:hover {
+  background-color: #005050;
+}
+
+/* Skeleton loader for innlasting */
+.skeleton-loader {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 0;
+  justify-items: stretch;
+}
+
+.skeleton-card {
+  background-color: #e0e0e0;
+  border-radius: 10px;
+  height: 220px;
+  width: 100%;
+  animation: pulse 1.5s infinite;
+}
+
+@keyframes pulse {
+  0% {
+    background-color: #e0e0e0;
+  }
+  50% {
+    background-color: #f0f0f0;
+  }
+  100% {
+    background-color: #e0e0e0;
+  }
+}
+
+/* Responsivitet for mindre skjermer */
+/* Responsivitet for mindre skjermer */
+@media (max-width: 768px) {
+  .home-auction-list {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); /* To kolonner */
+    gap: 10px; /* Mellomrom mellom kortene */
+  }
+
+  .home-auction-item {
+    display: flex;
+    flex-direction: column; /* Plasser elementer vertikalt */
+    justify-content: space-between; /* Fordel innholdet jevnt */
+    align-items: stretch; /* Strekk elementene til full bredde */
+    padding: 10px; /* Reduser padding for kortene */
+    font-size: 12px; /* Mindre tekst for kompakt visning */
+    border-radius: 5px; /* Mindre avrunding på kortene */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Subtil skygge */
+    height: 100%; /* Sørg for at kortene fyller grid-cellen */
+    min-height: 250px; /* Sett en minimumshøyde for jevne kort */
+  }
+
+  .home-auction-image {
+    width: 100%; /* Sørger for at bildet fyller bredden */
+    height: 120px; /* Sett ønsket høyde for bildet */
+    object-fit: cover; /* Kutt bildet for å passe inn */
+    border-radius: 5px; /* Reduser avrunding på bildene */
+  }
+
+  .home-auction-details {
+    flex: 1; /* La detaljene fylle tilgjengelig plass */
+    padding: 5px; /* Reduser padding for detaljer */
+    font-size: 10px; /* Mindre skrift for mer kompakt visning */
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between; /* Sørg for jevn fordeling av innhold */
+  }
+
+
+
+
+  .home-banner {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background: url('/public/images/banner.webp') no-repeat center center;
+    background-size: cover;
+    color: white;
+    padding: 15px; /* Redusert padding */
+    border-radius: 10px;
+    margin: 0; /* Fjern margin */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  }
+
+ 
+.home-banner-content {
+  flex: 1;
+  background: rgba(0, 0, 0, 0.5);
+  padding: 15px; /* Redusert padding */
+  border-radius: 10px;
+}
+.home-banner h1 {
+  margin-bottom: 10px; /* Redusert mellomrom under overskriften */
+  font-size: 24px; /* Juster størrelse om nødvendig */
+}
+
+.home-banner p {
+  margin-bottom: 5px; /* Redusert mellomrom under teksten */
+  font-size: 14px;
+}
+
+.home-banner-button {
+  padding: 8px 16px;
+  font-size: 14px;
+  margin-top: 10px; /* Justert mellomrom over knappen */
+}
+  .skeleton-loader {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 5px; /* Redusert gap */
+  }
+
+  .home-auctions-section h2 {
+    margin-left: 10px;
+  }
+}
+
+
+

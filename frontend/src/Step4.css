@@ -1,0 +1,165 @@
+.step4-container {
+  width: 90%;
+  margin: 20px auto;
+  text-align: center;
+  background-color: #f9f9f9;
+  border-radius: 10px;
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+}
+
+.step4-form {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.step4-group {
+  text-align: left;
+}
+
+.step4-group label {
+  font-size: 1rem;
+  font-weight: bold;
+  margin-bottom: 5px;
+  display: block;
+}
+
+.step4-control {
+  width: 100%;
+  padding: 12px;
+  font-size: 1rem;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  background-color: #fff;
+}
+
+.step4-image-preview-container {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  align-items: flex-start;
+}
+
+/* Image preview container */
+.step4-image-preview {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 10px;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  background-color: #f4f4f4;
+  width: 100%;
+  max-width: 400px;
+  height: 100px;
+}
+
+/* Større bilde */
+.step4-image-preview img {
+  width: 120px;
+  height: 100px;
+  object-fit: cover;
+  border-radius: 5px;
+}
+
+/* Drag-handle styling */
+.step4-drag-handle {
+  cursor: grab;
+  font-size: 1.5rem;
+  color: #555;
+}
+
+/* Button container */
+.step4-button-container {
+  display: flex;
+  gap: 5px;
+}
+
+.step4-button-container button {
+  padding: 5px 10px;
+  font-size: 0.9rem;
+  color: white;
+  background-color: #005050;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.step4-button-container button:hover {
+  background-color: #003838;
+}
+
+/* Last opp-knapp styling */
+.step4-image-upload-label {
+  display: block;
+  text-align: center;
+  margin: 20px auto;
+  cursor: pointer;
+  font-weight: bold;
+  color: #005050;
+}
+
+.step4-image-upload-label input[type="file"] {
+  display: none;
+}
+
+.step4-navigation {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 20px;
+}
+
+.step4-navigation button {
+  padding: 10px 20px;
+  font-size: 1rem;
+  color: white;
+  background-color: #005050;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.step4-navigation button:hover {
+  background-color: #003838;
+  transform: scale(1.05);
+}
+
+.step4-navigation button:disabled {
+  background-color: #ccc;
+  cursor: not-allowed;
+}
+
+/* Mobiltilpasning */
+@media (max-width: 768px) {
+  .step4-container {
+    width: 95%;
+    padding: 15px;
+  }
+
+  .step4-image-preview {
+    max-width: 100%;
+    height: auto;
+  }
+
+  .step4-image-preview img {
+    width: 100px;
+    height: 80px;
+  }
+
+  .step4-button-container button {
+    padding: 5px 10px;
+    font-size: 0.8rem;
+  }
+
+  .step4-navigation {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .step4-btn-primary {
+    width: 100%;
+  }
+}

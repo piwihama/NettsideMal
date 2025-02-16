@@ -1,0 +1,133 @@
+/* Reset CSS */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #f4f4f9;
+    color: #333;
+}
+
+.step3-container {
+    width: 80%;
+    margin: 20px auto;
+    padding: 20px;
+    background-color: #ffffff;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.step3-form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.step3-group {
+    margin-bottom: 5px;
+}
+
+.step3-group label {
+    font-weight: bold;
+    margin-bottom: 3px;
+    display: flex;
+    align-items: center;
+    font-size: 0.8em; /* Smaller font size */
+}
+
+.step3-control {
+    margin-right: 5px;
+}
+
+.step3-btn-primary {
+    margin-top: 10px;
+    padding: 8px 16px; /* Adjusted padding for a smaller button */
+    background-color: #005050 !important;
+    color: white !important;
+    border: none !important;
+    border-radius: 4px !important;
+    cursor: pointer !important;
+    font-size: 0.9em !important; /* Adjusted font size */
+    transition: background-color 0.3s !important;
+    width: auto; /* Auto width */
+}
+
+.step3-btn-primary:hover {
+    background-color: #003838 !important;
+}
+
+h2 {
+    color: #005050;
+    text-align: center;
+    margin-bottom: 15px;
+    font-size: 1.2em; /* Adjusted font size */
+}
+
+.step3-error {
+    color: red;
+    font-size: 0.7em; /* Adjusted font size */
+}
+
+.step3-navigation {
+    display: flex;
+    justify-content: center;
+    gap: 10px; /* Adjusted gap */
+}
+
+.equipment-container {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px; /* Adjusted gap */
+}
+
+.equipment-category {
+    flex: 1;
+    min-width: 200px; /* Adjusted minimum width */
+}
+
+.dropdown {
+    width: 100%; /* Full width */
+    padding: 8px; /* Adjusted padding */
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    background-color: #f0f0f0;
+    font-size: 0.9em; /* Adjusted font size */
+    margin-bottom: 10px;
+    cursor: pointer;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.dropdown:hover {
+    background-color: #e0e0e0;
+}
+
+.dropdown:after {
+    content: '\25BC'; /* Down arrow */
+    font-size: 0.8em; /* Adjusted font size */
+    margin-left: 10px;
+}
+
+.dropdown-content {
+    display: none;
+    position: relative;
+    z-index: 1;
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    padding: 10px;
+}
+
+.dropdown-content.active {
+    display: block;
+}
+
+.equipment-category:last-child {
+    flex-basis: 100%;
+}

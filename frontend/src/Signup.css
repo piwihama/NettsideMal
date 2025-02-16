@@ -1,0 +1,230 @@
+/* Container for hele registreringsboksen */
+.signup-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background-color: #f4f4f9;
+  padding: 20px;
+}
+
+/* Stil for registreringsboksen */
+.signup-box {
+  background-color: #fff;
+  padding: 30px;
+  border-radius: 12px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+  max-width: 600px; /* Reduserer bredden på skjemaet */
+  width: 100%;
+  box-sizing: border-box; /* Inkluder padding og border i bredden */
+}
+
+/* Overskrift */
+.signup-heading {
+  text-align: center;
+  margin-bottom: 15px;
+  font-size: 1.5rem; /* Mindre fontstørrelse */
+  color: #333;
+}
+
+/* Informasjonstekst */
+.signup-info {
+  text-align: center;
+  margin-bottom: 25px;
+  font-size: 0.9rem; /* Mindre fontstørrelse */
+  color: #555;
+}
+
+/* Skjema-grupper */
+.signup-form-group {
+  display: flex;
+  align-items: center;
+  margin-bottom: 20px; /* Redusert avstand mellom feltene */
+}
+
+/* Label-stil */
+.signup-form-group label {
+  flex: 0 0 150px; /* Reduserer bredden på label for bedre plass */
+  margin-right: 10px;
+  font-weight: 600;
+  color: #333;
+  text-align: right;
+  font-size: 0.9rem; /* Mindre fontstørrelse */
+}
+
+/* Input-felt */
+.signup-form-control {
+  flex: 1;
+  padding: 10px; /* Mindre padding for input */
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  font-size: 0.9rem; /* Mindre fontstørrelse */
+  transition: border-color 0.3s ease, box-shadow 0.3s ease;
+  box-sizing: border-box; /* Sikrer at bredde inkluderer padding */
+}
+
+/* Fokus-effekt for input-felt */
+.signup-form-control:focus {
+  border-color: #007bff;
+  box-shadow: 0 0 4px rgba(0, 123, 255, 0.3);
+  outline: none;
+}
+
+/* Input-gruppe for passord med vis/skjul-knapp */
+.signup-input-group {
+  display: flex;
+  align-items: center;
+}
+
+.signup-input-group .signup-form-control {
+  border-top-right-radius: 0;
+  border-bottom-right-radius: 0;
+}
+
+.signup-btn-outline-secondary {
+  padding: 10px;
+  border: 1px solid #ccc;
+  background-color: #f1f1f1;
+  border-top-right-radius: 6px;
+  border-bottom-right-radius: 6px;
+  cursor: pointer;
+  font-size: 0.9rem; /* Mindre fontstørrelse */
+  transition: background-color 0.3s ease;
+}
+
+.signup-btn-outline-secondary:hover {
+  background-color: #e2e6ea;
+}
+
+/* Stil for knappene */
+.signup-btn {
+  padding: 10px;
+  border-radius: 6px;
+  font-size: 0.9rem; /* Mindre fontstørrelse */
+  font-weight: bold;
+  width: 100%;
+  text-align: center;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+  margin-bottom: 10px; /* Redusert avstand mellom knappene */
+}
+
+.signup-btn-success {
+  background-color: #28a745;
+  color: white;
+  border: none;
+}
+
+.signup-btn-success:hover {
+  background-color: #218838;
+  transform: translateY(-2px);
+}
+
+.signup-btn-default {
+  background-color: #f8f9fa;
+  color: #333;
+  border: 1px solid #ccc;
+}
+
+.signup-btn-default:hover {
+  background-color: #e2e6ea;
+}
+
+/* Tekst for vilkår og betingelser */
+.signup-terms-text {
+  text-align: center;
+  font-size: 0.8rem;
+  color: #777;
+  margin-bottom: 15px;
+}
+
+/* Link-stil */
+.signup-link {
+  color: #007bff;
+  text-decoration: none;
+}
+
+.signup-link:hover {
+  text-decoration: underline;
+}
+
+/* Avstand mellom ulike kategorier i skjemaet */
+.signup-section {
+  margin-bottom: 30px; /* Redusert avstand mellom seksjonene */
+  padding-bottom: 15px;
+  border-bottom: 1px solid #ddd;
+}
+
+/* Stil for siste kategori (fjerner nederste border) */
+.signup-section:last-of-type {
+  border-bottom: none;
+  margin-bottom: 0;
+}
+
+/* Sekundærknapp-stil */
+.signup-btn-secondary {
+  background-color: #f8f9fa;
+  color: #333;
+  border: 1px solid #ccc;
+  padding: 10px;
+  border-radius: 6px;
+  font-size: 0.9rem;
+  font-weight: bold;
+  width: 100%;
+  text-align: center;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-decoration: none;
+  margin-bottom: 10px; /* Avstand til neste element */
+}
+
+/* Hover-effekt for sekundærknapp */
+.signup-btn-secondary:hover {
+  background-color: #e2e6ea;
+  transform: translateY(-2px);
+}
+
+/* Link-stil inni knappen */
+.signup-btn-secondary .signup-link {
+  color: inherit; /* Arver fargen fra knappen */
+  text-decoration: none;
+}
+
+/* Hover-effekt for linken */
+.signup-btn-secondary .signup-link:hover {
+  text-decoration: underline;
+}
+
+/* Media Query for mobil */
+@media (max-width: 768px) {
+  .signup-box {
+    padding: 20px; /* Redusert padding på mindre skjermer */
+    max-width: 90%; /* Gjør boksen mer responsiv */
+  }
+
+  .signup-form-group {
+    flex-direction: column; /* Endrer layout til vertikal */
+    align-items: flex-start; /* Justerer innhold til venstre */
+  }
+
+  .signup-form-group label {
+    text-align: left; /* Juster label til venstre */
+    margin-bottom: 5px; /* Avstand mellom label og input */
+    flex: 0 0 auto; /* Fjern fast bredde på label */
+  }
+
+  .signup-form-control {
+    width: 100%; /* Sikrer at input-feltet ikke strekker seg utover */
+  }
+
+  .signup-btn {
+    font-size: 1rem; /* Øker fontstørrelse for bedre lesbarhet */
+  }
+
+  .signup-info {
+    font-size: 0.85rem; /* Mindre tekst for informasjon */
+  }
+}
