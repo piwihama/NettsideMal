@@ -157,8 +157,9 @@ function Home() {
         <div className="home-content">
           <div className="home-banner">
             <div className="home-banner-content">
-              <h1>Lavere gebyrer. <br /> Bedre auksjonsopplevelse.</h1>
-              <p>Våre auksjonsrådgivere støtter deg gjennom hele salgsprosessen.</p>
+              <h1>Eksempel tittel</h1>
+              <p>Eksempel tekst: lorem
+              </p>
             </div>
           </div>
 
@@ -170,7 +171,7 @@ function Home() {
                 <div className="spinner"></div>
               </div>
             ) : featuredAuctions.length === 0 ? (
-              <p>Ingen fremhevede auksjoner tilgjengelig for øyeblikket.</p>
+              <p>Ingen fremhevede objekter tilgjengelig for øyeblikket.</p>
             ) : (
               <div className="home-auction-list">
                 {featuredAuctions.map((auction, index) =>
@@ -242,13 +243,13 @@ function Home() {
 
           {/* Alle auksjoner */}
           <div className="home-auctions-section">
-            <h2>ALLE AUKSJONER</h2>
+            <h2>ALLE OBJEKTER</h2>
             {loading ? (
               <div className="spinner-container">
                 <div className="spinner"></div>
               </div>
             ) : visibleAuctions.length === 0 ? (
-              <p>Ingen auksjoner tilgjengelig for øyeblikket.</p>
+              <p>Ingen objekter tilgjengelig for øyeblikket.</p>
             ) : (
               <div className="home-auction-list">
                 {visibleAuctions.map((auction, index) =>
