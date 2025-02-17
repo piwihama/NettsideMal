@@ -58,7 +58,7 @@ function Login() {
 
   const handleForgotPasswordSubmit = (event) => {
     event.preventDefault();
-    axios.post('https://rimelig-auksjon-backend.vercel.app/forgot-password', { email }, { withCredentials: true })
+    axios.post('https://nettside-mal-backend.vercel.app/forgot-password', { email }, { withCredentials: true })
       .then(res => {
         setResetOtpSent(true);
         setOtp(''); // Clear OTP field
@@ -72,7 +72,7 @@ function Login() {
 
   const handleResetPasswordSubmit = (event) => {
     event.preventDefault();
-    axios.post('https://rimelig-auksjon-backend.vercel.app/reset-password', { email, otp: resetOtp, newPassword }, { withCredentials: true })
+    axios.post('https://nettside-mal-backend.vercel.app/reset-password', { email, otp: resetOtp, newPassword }, { withCredentials: true })
       .then(res => {
         setForgotPassword(false);
         setResetOtpSent(false);
@@ -95,7 +95,7 @@ function Login() {
     setSuccessMessage('');
 
     if (Object.keys(validationErrors).length === 0) {
-      axios.post('https://rimelig-auksjon-backend.vercel.app/login', { email, password }, { withCredentials: true })
+      axios.post('https://nettside-mal-backend.vercel.app/login', { email, password }, { withCredentials: true })
         .then(res => {
           if (res.data.accessToken) {
             console.log('Login successful, token received:', res.data.accessToken);
@@ -132,7 +132,7 @@ function Login() {
 
   const refreshAccessToken = async () => {
     try {
-      const response = await axios.post('https://rimelig-auksjon-backend.vercel.app/api/refresh-token', {}, { withCredentials: true });
+      const response = await axios.post('https://nettside-mal-backend.vercel.app/api/refresh-token', {}, { withCredentials: true });
       if (response.data.accessToken) {
         localStorage.setItem('accessToken', response.data.accessToken);
         console.log('Access token renewed successfully');
@@ -175,7 +175,7 @@ function Login() {
 
   const handleOtpSubmit = (event) => {
     event.preventDefault();
-    axios.post('https://rimelig-auksjon-backend.vercel.app/verify-otp', { email: userEmail, otp }, { withCredentials: true })
+    axios.post('https://nettside-mal-backend.vercel.app/verify-otp', { email: userEmail, otp }, { withCredentials: true })
       .then(res => {
         setSuccessMessage('Engangskode verifisert. Vennligst logg inn.');
         setOtpRequired(false);
