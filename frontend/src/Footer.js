@@ -8,7 +8,7 @@ function Footer() {
         <div className="footer-section about">
           <h3>Om Oss</h3>
           <p>
-            Vi er en moderne auksjonstjeneste som tilbyr en enkel og sikker måte å kjøpe og selge på nettet.
+            
           </p>
         </div>
 

@@ -69,7 +69,7 @@ function Header() {
       </Helmet>
       <header className="header-top">
         <div className="upper-row">
-          <a className="logo-large" href="/home" title="RimeligAuksjon.no">EKSEMPEL.NO</a>
+          <a className="logo-large" href="/home" title="RimeligAuksjon.no">EKSEMPELNETTSIDE.NO</a>
           <form onSubmit={handleSearch} className="search-form">
             <div className="search-container">
               <input

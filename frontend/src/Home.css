@@ -99,7 +99,7 @@ body {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  background: url('/public/images/banner.webp') no-repeat center center;
+  background: url('/public/images/bannereksempel.png') no-repeat center center;
   background-size: cover;
   color: white;
   padding: 20px;
