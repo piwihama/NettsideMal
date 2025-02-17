@@ -110,21 +110,21 @@ function Header() {
             )}
           </div>
         </div>
-
         <nav className="menu">
-          <button onClick={() => navigateToCategory('car')} className="menu-button">
-            <i className="material-icons">directions_car</i>Bil
-          </button>
-          <button onClick={() => navigateToCategory('boat')} className="menu-button">
-            <i className="material-icons">directions_boat</i>Båt
-          </button>
-          <button onClick={() => navigateToCategory('motorcycle')} className="menu-button">
-            <i className="material-icons">two_wheeler</i>MC
-          </button>
-          <button onClick={() => navigateToCategory('marketplace')} className="menu-button">
-            <i className="material-icons">store</i>Torg
-          </button>
-        </nav>
+  <button onClick={() => navigateToCategory('services')} className="menu-button">
+    <i className="material-icons">build</i> Kategori 1
+  </button>
+  <button onClick={() => navigateToCategory('marketplace')} className="menu-button">
+    <i className="material-icons">store</i> Kategori 2
+  </button>
+  <button onClick={() => navigateToCategory('favorites')} className="menu-button">
+    <i className="material-icons">favorite</i> Kategori 3
+  </button>
+  <button onClick={() => navigateToCategory('search')} className="menu-button">
+    <i className="material-icons">search</i> Kategori 4
+  </button>
+</nav>
+
 
         <LoginModal isOpen={modalOpen} onRequestClose={() => setModalOpen(false)} purpose={modalPurpose} />
       </header>

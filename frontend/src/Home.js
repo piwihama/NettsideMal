@@ -165,7 +165,7 @@ function Home() {
 
           {/* Fremhevede auksjoner */}
           <div className="home-auctions-section">
-            <h2>FREMHEVET</h2>
+            <h2>FREMHEVEDE OBJEKTER</h2>
             {loading ? (
               <div className="spinner-container">
                 <div className="spinner"></div>
