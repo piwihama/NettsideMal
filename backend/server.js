@@ -13,7 +13,6 @@ const cookieParser = require('cookie-parser'); // Legg til her
 const app = express();
 
 
-
 require('dotenv').config({ path: '.env' });
 
 app.use(express.json({ limit: '200mb' }));
