@@ -118,7 +118,7 @@ app.options('*', cors(corsOptions)); //
 
 // Plasser dette før andre ruter og mellomvarer
 app.options('*', (req, res) => {
-  res.setHeader('Access-Control-Allow-Origin', 'https://www.rimeligauksjon.no');
+  res.setHeader('Access-Control-Allow-Origin', 'https://nettside-mal-ki24.vercel.app');
   res.setHeader('Access-Control-Allow-Methods', 'GET,HEAD,PUT,PATCH,POST,DELETE,OPTIONS');
   res.setHeader('Access-Control-Allow-Headers', 'Content-Type, Authorization');
   res.setHeader('Access-Control-Allow-Credentials', 'true');
@@ -135,7 +135,7 @@ const server = http.createServer(app);
 // Opprett WebSocket-server med riktig CORS-konfigurasjon
 const io = socketIo(server, {
   cors: {
-    origin: 'https://www.rimeligauksjon.no',
+    origin: 'https://nettside-mal-ki24.vercel.app',
     methods: ['GET', 'POST'],
     credentials: true,
   },
