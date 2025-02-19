@@ -94,7 +94,7 @@ function Header() {
 
             <button onClick={() => handleAuthNavigation('/nyauksjon')} className="header-button nyauksjon-button">
               <i className="material-icons">add_circle</i>
-              <span>Ny Auksjon</span>
+              <span>Legg ut annonse</span>
             </button>
 
             {loggedIn ? (
