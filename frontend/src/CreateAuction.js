@@ -38,7 +38,7 @@ function CreateAuction() {
       formData.append(`image${index}`, image);
     });
 
-    axios.post('https://rimelig-auksjon-backend.vercel.app/api/auctions', formData, {
+    axios.post('https://nettside-mal-ki24.vercel.app/api/auctions', formData, {
       headers: {
         Authorization: `Bearer ${token}`,
         'Content-Type': 'multipart/form-data'

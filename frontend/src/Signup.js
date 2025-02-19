@@ -23,7 +23,7 @@ function Signup() {
   });
   const logEvent = async (level, message, details = {}) => {
     try {
-      await axios.post('https://rimelig-auksjon-backend.vercel.app/log', {
+      await axios.post('https://nettside-mal-ki24.vercel.app/log', {
         level,
         message,
         details,
@@ -70,7 +70,7 @@ function Signup() {
       console.log('Sending data to server:', values);
       logEvent('form_submission', { values });
       axios
-        .post('https://rimelig-auksjon-backend.vercel.app/signup', values)
+        .post('https://nettside-mal-ki24.vercel.app/signup', values)
         .then((res) => {
           console.log('Response from server:', res);
           logEvent('signup_success', { response: res.data });
@@ -104,7 +104,7 @@ function Signup() {
     event.preventDefault();
     logEvent('otp_submission', { otp });
     axios
-      .post('https://rimelig-auksjon-backend.vercel.app/verify-otp', { email: values.email, otp })
+      .post('https://nettside-mal-ki24.vercel.app/verify-otp', { email: values.email, otp })
       .then((res) => {
         console.log('OTP verified:', res);
         logEvent('otp_verification_success', { response: res.data });

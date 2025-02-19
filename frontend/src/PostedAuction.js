@@ -87,7 +87,7 @@ function PostedAuction() {
 
       // Fetch the latest data from the backend to ensure consistency
       try {
-        const response = await axios.get(`https://rimelig-auksjon-backend.vercel.app/api/liveauctions/${id}`, {
+        const response = await axios.get(`https://nettside-mal-ki24.vercel.app/api/liveauctions/${id}`, {
           headers: { Authorization: `Bearer ${localStorage.getItem('accessToken')}` },
         });
 
@@ -108,7 +108,7 @@ function PostedAuction() {
   useEffect(() => {
     const fetchAuction = async () => {
       try {
-        const response = await axios.get(`https://rimelig-auksjon-backend.vercel.app/api/liveauctions/${id}`, {
+        const response = await axios.get(`https://nettside-mal-ki24.vercel.app/api/liveauctions/${id}`, {
           headers: { Authorization: `Bearer ${localStorage.getItem('accessToken')}` },
         });
         setAuction(response.data);
@@ -192,7 +192,7 @@ function PostedAuction() {
 
       // Send the bid via HTTP request for server validation
       const response = await axios.post(
-        `https://rimelig-auksjon-backend.vercel.app/api/liveauctions/${id}/bid`,
+        `https://nettside-mal-ki24.vercel.app/api/liveauctions/${id}/bid`,
         { bidAmount: parsedBidAmount },
         { headers: { Authorization: `Bearer ${token}` } }
       );
@@ -208,7 +208,7 @@ function PostedAuction() {
         });
 
         // Fetch the latest auction data from the backend after placing the bid
-        const auctionResponse = await axios.get(`https://rimelig-auksjon-backend.vercel.app/api/liveauctions/${id}`, {
+        const auctionResponse = await axios.get(`https://nettside-mal-ki24.vercel.app/api/liveauctions/${id}`, {
           headers: { Authorization: `Bearer ${token}` },
         });
         setAuction(auctionResponse.data);

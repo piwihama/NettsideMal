@@ -18,7 +18,7 @@ const MyAuctions = () => {
     const fetchAuctions = async () => {
       try {
         const token = localStorage.getItem('accessToken');
-        const response = await axios.get('https://rimelig-auksjon-backend.vercel.app/api/myauctions', {
+        const response = await axios.get('https://nettside-mal-ki24.vercel.app/api/myauctions', {
           headers: { Authorization: `Bearer ${token}` },
         });
         setAuctions(response.data);

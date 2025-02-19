@@ -13,7 +13,7 @@ function ResetPassword() {
     event.preventDefault();
     const token = searchParams.get('accessToken');
     try {
-      const response = await axios.post('https://rimelig-auksjon-backend.vercel.app/reset-password', { token, newPassword: password });
+      const response = await axios.post('https://nettside-mal-ki24.vercel.app/reset-password', { token, newPassword: password });
       setMessage(response.data.message);
     } catch (error) {
       setMessage('Error resetting password');

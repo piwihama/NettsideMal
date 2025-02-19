@@ -101,12 +101,12 @@ function MinSide() {
       <div className='myside-container'>
         <div className="myside-back-button-container">
           <h1>Min Side</h1>
-          <p>Velkommen til din personlige side. Her kan du se og administrere dine auksjoner, meldinger, og kontoopplysninger.</p>
+          <p>Velkommen til din personlige side. Her kan du se og administrere dine annonser, meldinger, og kontoopplysninger.</p>
           <div className='myside-content'>
           <div className='myside-section'>
   <div className='myside-card'>
     <div className='myside-card-header' onClick={() => toggleSection('auctions')}>
-      <h5 className='myside-card-title'>Mine Auksjoner (Forespørsler)</h5>
+      <h5 className='myside-card-title'>Mine annonser (Forespørsler)</h5>
       <i className={`myside-toggle-icon ${activeSection === 'auctions' ? 'active' : ''}`}>&#9660;</i>
     </div>
     <div className={`myside-card-body ${activeSection === 'auctions' ? 'active' : ''}`}>
@@ -142,9 +142,9 @@ function MinSide() {
           ))}
         </div>
       ) : (
-        <p>Ingen auksjoner funnet.</p>
+        <p>Ingen annonser funnet.</p>
       )}
-      <a href='/myauctions' className='myside-btn myside-btn-primary'>Se Mine Auksjoner</a>
+      <a href='/myauctions' className='myside-btn myside-btn-primary'>Se Mine Annonser</a>
     </div>
   </div>
 </div>
@@ -152,7 +152,7 @@ function MinSide() {
 <div className='myside-section'>
   <div className='myside-card'>
     <div className='myside-card-header' onClick={() => toggleSection('liveAuctions')}>
-      <h5 className='myside-card-title'>Mine Live Auksjoner</h5>
+      <h5 className='myside-card-title'>Mine Live Annonser</h5>
       <i className={`myside-toggle-icon ${activeSection === 'liveAuctions' ? 'active' : ''}`}>&#9660;</i>
     </div>
     <div className={`myside-card-body ${activeSection === 'liveAuctions' ? 'active' : ''}`}>
@@ -188,9 +188,9 @@ function MinSide() {
           ))}
         </div>
       ) : (
-        <p>Ingen live auksjoner funnet.</p>
+        <p>Ingen aktive annonser funnet.</p>
       )}
-      <a href='/myliveauctions' className='myside-btn myside-btn-primary'>Se Mine Live Auksjoner</a>
+      <a href='/myliveauctions' className='myside-btn myside-btn-primary'>Se Mine Aktive Annonser</a>
     </div>
   </div>
 </div>

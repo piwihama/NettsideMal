@@ -236,19 +236,7 @@ function Login() {
           {errors.password && <span className="text-danger">{errors.password}</span>}
         </div>
 
-        <div className="login-form-check">
-          <input
-            type="checkbox"
-            id="rememberMe"
-            className="login-form-check-input"
-            checked={rememberMe}
-            onChange={handleRememberMeChange}
-          />
-          <label htmlFor="rememberMe" className="login-form-check-label">
-            Husk meg
-          </label>
-        </div>
-
+     
         {errors.general && <div className="alert alert-danger">{errors.general}</div>}
         <button type="submit" className="login-btn login-btn-success"><strong>Logg inn</strong></button>
         <p className="terms-text">Du godtar våre vilkår og betingelser</p>

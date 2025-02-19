@@ -16,7 +16,7 @@ function SearchResults() {
     const fetchResults = async () => {
       try {
         const searchTerm = query.get('q');
-        const response = await axios.get(`https://rimelig-auksjon-backend.vercel.app/api/search?q=${searchTerm}`);
+        const response = await axios.get(`https://nettside-mal-ki24.vercel.app/api/search?q=${searchTerm}`);
         setResults(response.data);
       } catch (error) {
         console.error('Error fetching search results:', error);

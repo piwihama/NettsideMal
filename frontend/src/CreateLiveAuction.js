@@ -66,7 +66,7 @@ function CreateLiveAuction() {
   useEffect(() => {
     const fetchAuction = async () => {
       try {
-        const response = await axios.get(`https://rimelig-auksjon-backend.vercel.app/api/auctions/${id}`, {
+        const response = await axios.get(`https://nettside-mal-ki24.vercel.app/api/auctions/${id}`, {
           headers: { Authorization: `Bearer ${localStorage.getItem('accessToken')}` },
         });
 
@@ -167,7 +167,7 @@ function CreateLiveAuction() {
     e.preventDefault();
     try {
       const response = await axios.post(
-        'https://rimelig-auksjon-backend.vercel.app/api/liveauctions',
+        'https://nettside-mal-ki24.vercel.app/api/liveauctions',
         formData,
         {
           headers: { Authorization: `Bearer ${localStorage.getItem('accessToken')}` },

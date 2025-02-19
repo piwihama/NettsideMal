@@ -5,7 +5,7 @@ const AuctionList = () => {
   const [auctions, setAuctions] = useState([]);
 
   useEffect(() => {
-    fetch('https://rimelig-auksjon-backend.vercel.app/api/auctions')
+    fetch('https://nettside-mal-ki24.vercel.app/api/auctions')
       .then(response => response.json())
       .then(data => setAuctions(data))
       .catch(error => console.error('Error fetching auctions:', error));

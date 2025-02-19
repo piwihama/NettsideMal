@@ -92,7 +92,7 @@ const Summary = ({ formData, prevStep }) => {
   
         console.log(`📤 Sender batch ${i / batchSize + 1} til backend...`);
         const auctionResponse = await fetch(
-          "https://rimelig-auksjon-backend.vercel.app/api/auctions",
+          "https://nettside-mal-ki24.vercel.app/api/auctions",
           {
             method: "POST",
             headers: {

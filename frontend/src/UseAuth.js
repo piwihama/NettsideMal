@@ -50,7 +50,7 @@ const UseAuth = () => {
 
   const refreshAccessToken = async (refreshToken) => {
     try {
-      const response = await fetch('https://rimelig-auksjon-backend.vercel.app/api/refresh-token', {
+      const response = await fetch('https://nettside-mal-ki24.vercel.app/api/refresh-token', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',

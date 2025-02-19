@@ -22,11 +22,11 @@ function AdminDashboard() {
 
     setLoading(true);
 
-    const auctionsRequest = axios.get('https://rimelig-auksjon-backend.vercel.app/api/auctions', {
+    const auctionsRequest = axios.get('https://nettside-mal-ki24.vercel.app/api/auctions', {
       headers: { Authorization: `Bearer ${token}` }
     });
 
-    const liveAuctionsRequest = axios.get('https://rimelig-auksjon-backend.vercel.app/api/liveauctions', {
+    const liveAuctionsRequest = axios.get('https://nettside-mal-ki24.vercel.app/api/liveauctions', {
       headers: { Authorization: `Bearer ${token}` }
     });
 
@@ -65,7 +65,7 @@ function AdminDashboard() {
 
   const handleDelete = (id) => {
     const token = localStorage.getItem('accessToken');
-    axios.delete(`https://rimelig-auksjon-backend.vercel.app/api/auctions/${id}`, {
+    axios.delete(`https://nettside-mal-ki24.vercel.app/api/auctions/${id}`, {
       headers: {
         Authorization: `Bearer ${token}`
       }
@@ -85,7 +85,7 @@ function AdminDashboard() {
 
   const handleDeleteLive = (id) => {
     const token = localStorage.getItem('accessToken');
-    axios.delete(`https://rimelig-auksjon-backend.vercel.app/api/liveauctions/${id}`, {
+    axios.delete(`https://nettside-mal-ki24.vercel.app/api/liveauctions/${id}`, {
       headers: {
         Authorization: `Bearer ${token}`
       }
@@ -100,7 +100,7 @@ function AdminDashboard() {
   };
 
   const clearAllCache = (token) => {
-    axios.post('https://rimelig-auksjon-backend.vercel.app/api/clear-cache', {}, {
+    axios.post('https://nettside-mal-ki24.vercel.app/api/clear-cache', {}, {
       headers: {
         Authorization: `Bearer ${token}`
       }

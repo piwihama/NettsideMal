@@ -141,7 +141,7 @@ function Header() {
         </Link>
         <button onClick={() => { scrollToTop(); handleAuthNavigation('/nyauksjon'); }} className="bottom-nav-button">
           <i className="material-icons">add_circle</i>
-          <span>Ny Auksjon</span>
+          <span>Ny Annonse</span>
         </button>
       </nav>
     </>

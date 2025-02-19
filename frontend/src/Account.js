@@ -25,7 +25,7 @@ const Account = () => {
     const fetchUserDetails = async () => {
       try {
         const token = localStorage.getItem('token');
-        const response = await axios.get('https://rimelig-auksjon-backend.vercel.app/api/userdetails', {
+        const response = await axios.get('https://nettside-mal-ki24.vercel.app/api/userdetails', {
           headers: {
             'Authorization': `Bearer ${token}`
           }
@@ -55,7 +55,7 @@ const Account = () => {
         delete updatedValues.password;
       }
 
-      const response = await axios.put('https://rimelig-auksjon-backend.vercel.app/api/userdetails', updatedValues, {
+      const response = await axios.put('https://nettside-mal-ki24.vercel.app/api/userdetails', updatedValues, {
         headers: {
           'Authorization': `Bearer ${token}`
         }

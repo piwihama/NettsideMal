@@ -18,7 +18,7 @@ function Home() {
 
   const fetchAuctions = async () => {
     try {
-      const response = await axios.get('https://rimelig-auksjon-backend.vercel.app/api/liveauctions');
+      const response = await axios.get('https://nettside-mal-ki24.vercel.app/api/liveauctions');
       const { liveAuctions, featuredAuctions } = response.data;
 
       // Beregn tid igjen for både live og fremhevede auksjoner

@@ -41,7 +41,7 @@ const AuctionForm = () => {
 
   const submitForm = async () => {
     try {
-      const response = await fetch('https://rimelig-auksjon-backend.vercel.app/api/auctions', {
+      const response = await fetch('https://nettside-mal-ki24.vercel.app/api/auctions', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
