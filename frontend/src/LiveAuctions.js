@@ -95,7 +95,7 @@ function LiveAuctions() {
       const headers = token ? { Authorization: `Bearer ${token}` } : {};
 
       const response = await axios.get(
-        'https://rimelig-auksjon-backend.vercel.app/api/liveauctions/filter',
+        'https://nettside-mal-ki24.vercel.app/api/liveauctions/filter',
         { params: queryParams, headers }
       );
 
@@ -162,7 +162,7 @@ const fetchFilterCounts = useCallback(async () => {
 
     // Send gjeldende kategori som en parameter
     const response = await axios.get(
-      'https://rimelig-auksjon-backend.vercel.app/api/liveauctions/counts',
+      'https://nettside-mal-ki24.vercel.app/api/liveauctions/counts',
       { params: { category: filters.category }, headers }
     );
 
