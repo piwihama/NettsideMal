@@ -104,7 +104,7 @@ app.use(cookieParser());
 
 const corsOptions = {
   origin: [
-    'https://www.rimeligauksjon.no', // Frontend-domenet
+    'https://nettside-mal-ki24.vercel.app', // Frontend-domenet
     'http://localhost:8081', // For lokal utvikling
   ],
   methods: 'GET,HEAD,PUT,PATCH,POST,DELETE,OPTIONS',
