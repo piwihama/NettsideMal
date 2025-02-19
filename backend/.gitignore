@@ -1,5 +1,3 @@
 .vercel
 # Ignorer miljøfiler
-.env
-backend/.env
-file-upload-service/.env
+
